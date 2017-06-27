@@ -1,19 +1,12 @@
 @import 'colors';
 @import 'resolutions';
 @import 'fonts';
-$aside-col: 4;
-$main-col: 2;
-$full-col: 1;
 
 * {
 	font-size: 0;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-@function column($n) {
-	@return 100% /$n;
 }
 
 .col {
@@ -24,18 +17,6 @@ $full-col: 1;
 .row {
 	display: flex;
 	flex-direction: row;
-}
-
-.row, .l12 {
-	width: column($full-col);
-}
-
-.l3 {
-	width: column($aside-col);
-}
-
-.l6 {
-	width: column($main-col);
 }
 
 header {

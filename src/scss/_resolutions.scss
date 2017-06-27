@@ -1,0 +1,36 @@
+$aside-col: 4;
+$main-col: 2;
+$full-col: 1;
+$full-col: 1;
+
+@function column($n) {
+	@return 100% /$n;
+}
+
+.row, .l12 {
+	width: column($full-col);
+}
+
+.l3 {
+	width: column($aside-col);
+}
+
+.l6 {
+	width: column($main-col);
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    width: column($full-col) !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+	.left {
+		width: column($aside-col) !important;
+	}
+
+	.right {
+		width: column($aside-col)*3 !important;
+	}
+}
