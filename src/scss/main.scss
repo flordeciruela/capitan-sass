@@ -1,0 +1,83 @@
+@import 'colors';
+@import 'resolutions';
+@import 'fonts';
+$aside-col: 4;
+$main-col: 2;
+$full-col: 1;
+
+* {
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@function column($n) {
+	@return 100% /$n;
+}
+
+.col {
+	display: inline-block;
+	padding: 15px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row, .l12 {
+	width: column($full-col);
+}
+
+.l3 {
+	width: column($aside-col);
+}
+
+.l6 {
+	width: column($main-col);
+}
+
+header {
+	background-color: $background-principal;
+	color: $color-principal;
+}
+
+footer {
+	display: flex;
+	height: 70px;
+	justify-content: center;
+	align-items: center;
+}
+
+.aside {
+	padding: 15px;
+	text-align: center;
+}
+
+.aside p {
+	margin: 15px auto;
+}
+
+.aside, footer,  {
+	background-color: $background-secundario;
+	color: $color-principal;
+}
+
+footer, .col-3 {
+	color: $color-principal;
+	background-color: $background-secundario;
+	nav {
+		background-color: $color-principal;
+	}
+}
+
+nav li {
+	color: $color-principal;
+	background-color: $background-secundario;
+	list-style: none;
+}
+
+.selected {
+	background-color: $background-principal;
+}
